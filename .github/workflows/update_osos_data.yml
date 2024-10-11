@@ -14,14 +14,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.GIT_API_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GH_API_TOKEN }}
 
     steps:
       - name: Checkout OSOS
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9
 
@@ -38,8 +38,8 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config --global user.name 'grantbuster'
-          git config --global user.email 'grant.buster@nrel.gov'
+          git config --global user.name 'RHammond2'
+          git config --global user.email '13874373+RHammond2@users.noreply.github.com'
           git add ./data/*.csv
           git add ./plots/*.png
           git commit -m "update osos data and plots"
