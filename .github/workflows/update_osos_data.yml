@@ -2,7 +2,6 @@
 
 name: Update OSOS Data
 on:
-
   # Run every Sunday night at 11pm Mountain Time (6am Monday UTC)
   schedule:
     - cron: "0 6 * * 1"
@@ -14,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.GH_API_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GIT_API_TOKEN }}
 
     steps:
       - name: Checkout OSOS
