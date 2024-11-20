@@ -4,6 +4,6 @@ wisdem,orbit,orbit-nrel,,,data/orbit.csv
 wisdem,wombat,wombat,,,data/wombat.csv
 nrel,waves,waves,,,data/waves.csv
 nrel,nrwal,nrel-nrwal,,,data/nrwal.csv
-nrel,force,,,data/force.csv
-nrel,coral,,,data/coral.csv
+nrel,force,,,,data/force.csv
+nrel,coral,,,,data/coral.csv
 nrel,openoa,openoa,,,data/openoa.csv
