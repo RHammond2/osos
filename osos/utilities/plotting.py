@@ -60,6 +60,9 @@ class Plotting:
 
         fig, ax = plt.subplots(1, 1, figsize=figsize)
         data = df[metric].astype(float)
+        
+        # Ignore time where project is live on GitHub, but not yet on PyPI
+        data = data.loc[data.ne(0).idxmax():]
 
         if cumulative:
             data = data.cumsum()
@@ -105,7 +108,7 @@ class Plotting:
         save_dir : str
             Directory to save the plots. Will be created if it doesnt exist.
         """
-
+        print(metric, cumulative)
         fps = glob(source_dir + '/*.csv')
         names = [os.path.basename(fp).replace('.csv', '') for fp in fps]
 
@@ -114,6 +117,7 @@ class Plotting:
 
         for name, fp in zip(names, fps):
             name = name.lower()
+            print(name)
             save_path = os.path.join(save_dir, f'{name}_{metric}.png')
 
             if cumulative:
