@@ -7,3 +7,4 @@ nrel,nrwal,nrel-nrwal,,,data/nrwal.csv
 nrel,force,,,,data/force.csv
 nrel,coral,,,,data/coral.csv
 nrel,openoa,openoa,,,data/openoa.csv
+nrel,turbine-models,turbine-models,,,data/turbine-models.csv
