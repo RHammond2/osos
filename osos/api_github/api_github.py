@@ -374,10 +374,13 @@ class Github:
             c_date = c_date.date()
             stop = True
             for date in date_iter:
+                # print(date)
+                # if c_date == date.date():
                 if c_date == date:
                     out.at[date, 'commits'] += 1
                     stop = False
                     break
+                # elif c_date > date.date():
                 elif c_date > date:
                     stop = False
 

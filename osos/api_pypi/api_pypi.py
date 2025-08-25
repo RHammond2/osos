@@ -2,6 +2,7 @@
 """
 Interface module for pypi API
 """
+
 import pypistats
 import datetime
 import numpy as np
